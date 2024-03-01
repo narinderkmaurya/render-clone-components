@@ -63,7 +63,7 @@ const Accordion = () => {
             {/* accordion */}
             <div className={`container max-w-3xl margin-[2em] mx-auto text-black pt-4 mb-8 ${regular.className}`}>
                 <div className="bg-white p-1.5 m-1.5 rounded-xl">
-                    <details open>
+                    <details >
                         <summary className='flex justify-between rounded-xl'>
                             Coderships to inspire you
 
@@ -75,7 +75,7 @@ const Accordion = () => {
                     </details>
                 </div>
                 <div className="bg-white p-1.5 m-1.5 rounded-xl">
-                    <details open>
+                    <details >
                         <summary className='flex justify-between rounded-xl'>
                             Spend more time building & less time applying
 
@@ -87,7 +87,7 @@ const Accordion = () => {
                     </details>
                 </div>
                 <div className="bg-white p-1.5 m-1.5 rounded-xl">
-                    <details open>
+                    <details >
                         <summary className='flex justify-between rounded-xl'>
                             It’s all about real-time projects work experience
 
@@ -99,7 +99,7 @@ const Accordion = () => {
                     </details>
                 </div>
                 <div className="bg-white p-1.5 m-1.5 rounded-xl">
-                    <details open>
+                    <details >
                         <summary className='flex justify-between rounded-xl'>
                             You are not alone, join our community
 

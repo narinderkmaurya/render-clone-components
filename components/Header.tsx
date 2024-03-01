@@ -81,7 +81,7 @@ const Header = () => {
                 transition={{ duration: 1, ease: "easeInOut" }} >
                 <Image src={rotate} alt="" />
             </motion.div>
-            <motion.div className="h-0 top-[450px] 2xl:top-[390px] relative 2xl:left-[460px] md:left-[300px] lg:left-[340px]" initial={{ scale: 0.9 }}
+            <motion.div className="h-0 top-[450px] 2xl:top-[450px] relative 2xl:left-[500px] md:left-[300px] lg:left-[340px]" initial={{ scale: 0.9 }}
                 animate={{ scale: 1 }}
                 transition={{ duration: 1, ease: "easeInOut" }} >
                 <Image src={green} alt="" />

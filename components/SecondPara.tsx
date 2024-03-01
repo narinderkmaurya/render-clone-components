@@ -42,7 +42,7 @@ const SecondPara = () => {
                 A new way to land dream internships in tech
             </motion.h3>
             <motion.div
-                className="h-0 relative left-[600px] bottom-4"
+                className="h-0 relative left-[600px] bottom-4 2xl:left-[720px]"
                 initial={{ opacity: 0, y: 100 }}
                 animate={{ y: 0, opacity: inView ? 1 : 0 }}
                 transition={{ duration: 1, once: true }}
