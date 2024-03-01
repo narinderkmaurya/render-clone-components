@@ -65,10 +65,10 @@ const Second = () => {
                     animate={controls}
                     variants={textVariant}
                 >
-                    Coderships aren't just about coding; it's about turning your potential into
+                    Coderships aren&apos;t just about coding; it&apos;s about turning your potential into
                     results. Coderships provide you with the platform to showcase your creativity,
-                    problem-solving abilities, and technical expertise. Whether you're a novice
-                    coder or a student with past internship experience, there's a challenge waiting
+                    problem-solving abilities, and technical expertise. Whether you&apos;re a novice
+                    coder or a student with past internship experience, there&apos;s a challenge waiting
                     for you to tackle.
                 </motion.p>
 

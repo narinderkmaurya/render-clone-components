@@ -60,10 +60,10 @@ const Columns = () => {
                 </motion.span>
                 <motion.p className={`text-[1.25rem] pt-6 leading-[2.5rem] text-[#544D49] ${medium.className}  `}
                     variants={textVariants}>
-                    At BrightIntern, we've recognized an undeniable gap between the world of
+                    At BrightIntern, we&apos;ve recognized an undeniable gap between the world of
                     learning and the demands of the workforce. We firmly believe that the key
                     to bridging this gap lies in providing students with opportunities to work
-                    on real-time projects and test their skills. It's this belief that has driven us
+                    on real-time projects and test their skills. It&apos;s this belief that has driven us
                     to create a platform dedicated to empowering every student to apply their
                     skills in Codeships and leading them to best internships in tech with
                     proof-of-code

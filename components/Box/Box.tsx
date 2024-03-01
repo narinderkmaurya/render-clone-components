@@ -55,7 +55,7 @@ export const Box = () => {
                 <div className="flexcontainer">
                   <motion.p className="text" variants={textVariants}>
                     <span className={`text-wrapper ${regular.className}`}>
-                      Let's face it – it's tough to convey the depth of your coding skills on a resume. Traditional
+                      Let&apos;s face it – it&apos;s tough to convey the depth of your coding skills on a resume. Traditional
                       <br />
                     </span>
                   </motion.p>
@@ -72,7 +72,7 @@ export const Box = () => {
                   </motion.p>
                   <motion.p className="text" variants={textVariants}>
                     <span className="text-wrapper">
-                      essence of what you bring to the table? We don't&nbsp;&nbsp;think so.
+                      essence of what you bring to the table? We don&apos;t&nbsp;&nbsp;think so.
                       <br />
                     </span>
                   </motion.p>
@@ -83,7 +83,7 @@ export const Box = () => {
                   </motion.p>
                   <motion.p className="text" variants={textVariants}>
                     <span className="text-wrapper">
-                      It's challenging for potential employers to understand the full extent of your abilities based on
+                      It&apos;s challenging for potential employers to understand the full extent of your abilities based on
                       <br />
                     </span>
                   </motion.p>
@@ -108,7 +108,7 @@ export const Box = () => {
               <div className="flexcontainer-2">
                 <motion.p className="span-wrapper" variants={textVariants}>
                   <span className="span">
-                    Your code tells a story – your story. It's not just
+                    Your code tells a story – your story. It&apos;s not just
                     <br />
                   </span>
                 </motion.p>
@@ -119,7 +119,7 @@ export const Box = () => {
                 </motion.p>
                 <motion.p className="span-wrapper" variants={textVariants}>
                   <span className="span">
-                    projects you've worked on. It's about the
+                    projects you&apos;ve worked on. It&apos;s about the
                     <br />
                   </span>
                 </motion.p>
@@ -141,19 +141,19 @@ export const Box = () => {
                 </motion.p>
                 <motion.p className="span-wrapper" variants={textVariants}>
                   <span className="span">
-                    It's about the problems you've solved, the
+                    It&apos;s about the problems you&apos;ve solved, the
                     <br />
                   </span>
                 </motion.p>
                 <motion.p className="span-wrapper" variants={textVariants}>
                   <span className="span">
-                    challenges you've overcome, and the
+                    challenges you&apos;ve overcome, and the
                     <br />
                   </span>
                 </motion.p>
                 <motion.p className="span-wrapper" variants={textVariants}>
                   <span className="span">
-                    solutions you've crafted. But how do you
+                    solutions you&apos;ve crafted. But how do you
                     <br />
                   </span>
                 </motion.p>
@@ -202,7 +202,7 @@ export const Box = () => {
                 </motion.p>
                 <motion.p className="span-wrapper" variants={textVariants}>
                   <span className="span">
-                    skills in a unique and impactful manner, it's
+                    skills in a unique and impactful manner, it&apos;s
                     <br />
                   </span>
                 </motion.p>
