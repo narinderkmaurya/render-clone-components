@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=General+Sans:wght@500;600&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.br{
+  border: 1px solid #D9D9D950;
+  border-top-style: none;
+}
+
+body{
+  color:white;
+}
+
+.card{
+  border: 1px solid #D9D9D950;
+
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+
+.btn {
+  box-shadow: inset 0 0 0 0 ;
+  transition: linear 0.3s;
+}
+
+.btn:hover {
+  box-shadow: inset 200px 0 0 0 #8a05ff;
+  cursor: pointer;
+  color: white;
+}
+
+.link {
+  box-shadow: inset 0 0 0 0;
+  transition: linear 0.3s;
+  outline: none;
+}
+
+.link:hover {
+  box-shadow: inset 100px 0 0 0 #48008c;
+  cursor: pointer;
+}

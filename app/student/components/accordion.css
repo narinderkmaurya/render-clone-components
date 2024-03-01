@@ -1,0 +1,73 @@
+
+*, *:after, *:before {
+	box-sizing: border-box;
+}
+
+body{background-color: white;}
+
+*:focus {
+	outline: none;
+}
+
+body > div {
+	width: 90%;
+	max-width: 600px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 5rem;
+	margin-bottom: 5rem;
+}
+
+details div {
+    background-color: white;
+    border-radius: 12px;
+}
+
+details div > * + * {
+	margin-top: 1.5em;
+}
+
+details + details {
+	margin-top: .5rem;
+}
+
+summary {
+	list-style: none;
+}
+
+summary::-webkit-details-marker {
+	display: none;
+}
+
+summary {
+	padding: .75em 1em;
+    background-color: white;
+
+	cursor: pointer;
+	position: relative;
+	padding-left: calc(1.75rem + .75rem + .75rem);
+}
+
+summary:before {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: .75rem;
+	content: "✨";
+	width: 1.75rem;
+	height: 1.75rem;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	flex-shrink: 0;
+}
+
+details[open] summary {
+	background-color: #1427d3;
+    color: white;
+
+}
+
+
+
+
