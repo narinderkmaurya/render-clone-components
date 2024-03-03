@@ -9,6 +9,16 @@
   border-top-style: none;
 }
 
+.brall{
+  border: 1px solid #D7D7D7;
+}
+.brall2{
+  border: 1px solid #D7D7D7;
+  border-left-style: none;
+
+}
+
+
 body{
   color:white;
 }
@@ -45,4 +55,65 @@ body{
 .link:hover {
   box-shadow: inset 100px 0 0 0 #48008c;
   cursor: pointer;
+}
+
+
+@keyframes marqueeUp {
+  0% {
+    transform: translateY(0%);
+  }
+
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes marqueeDown {
+  0% {
+    transform: translateY(-50%);
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+.marquee-up,
+.marquee-down {
+  position: relative;
+}
+
+.marquee-up .content,
+.marquee-down .content {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 100%;
+  animation-duration: 20s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.marquee-up .content {
+  animation-name: marqueeUp;
+}
+
+.marquee-down .content {
+  animation-name: marqueeDown;
+}
+
+.marquee-up:hover .content,
+.marquee-down:hover .content {
+  animation-play-state: paused;
+}
+
+
+
+.custom-tooltip {
+  position: absolute;
+  background-color: #333;
+  color: #fff;
+  padding:  5px;
+  border-radius:  4px;
+  z-index:  1000;
 }

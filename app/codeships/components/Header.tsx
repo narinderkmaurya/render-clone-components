@@ -70,8 +70,8 @@ export const Header = () => {
           are secured
         </div>
 
-        <div className="flex w-full justify-end">
-          <div className="h-[125px] w-[100px] border-[#D7D7D750] border" />
+        <div className="flex w-full justify-end relative top-[49px]">
+          <div className="h-[100px] w-[100px] border-[#D7D7D750] border" />
         </div>
         <div className="flex w-full h-[50px] columns-3 ">
           <div className="border-[#D7D7D750] border border-l-0 w-[500px]" />

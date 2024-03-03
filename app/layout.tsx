@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 
 import localfont from "next/font/local"
+import { Providers } from "@/components/providers";
 
 
 
@@ -11,10 +12,10 @@ const regular = localfont(
   {
     src: [
       {
-      path:"../OTF/GeneralSans-Regular.otf"
+        path: "../OTF/GeneralSans-Regular.otf"
       }
     ],
-    variable:"--font-regularGeneral"
+    variable: "--font-regularGeneral"
   }
 )
 
@@ -33,9 +34,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${regular.variable} font-regular-sans`}>
-        <Navbar />
-        {children}</body>
+      <Providers>
+        <body className={`${regular.variable} font-regular-sans`}>
+          {children}</body>
+      </Providers>
+
     </html>
   );
 }

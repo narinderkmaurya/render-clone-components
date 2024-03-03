@@ -1,5 +1,6 @@
 import logo from "@/public/logo.svg";
 import Image from "next/image";
+import Link from "next/link";
 
 const links = [
     { name: "Product", href: "/product" },
@@ -15,7 +16,7 @@ export default function Navbar() {
     return (
         <nav className='bg-[#0d0d0d] border-b w-full flex items-center py-6 px-4 justify-between'>
             <div className="flex">
-                <Image src={logo} alt="logo" className="cursor-pointer"/>
+                <Image src={logo} alt="logo" className="cursor-pointer" />
 
                 <ul className="flex 2xl:gap-6 lg:ml-20 ">
                     {links.map((link, index) => (
@@ -31,11 +32,12 @@ export default function Navbar() {
                     Sign In
                 </span>
 
-                <button className="bg-white text-black px-6 py-6 -mx-4 -my-6 btn">
-                  Get Started          
-                </button>
+                <Link href="get-started">
+                    <button className="bg-white text-black px-6 py-6 -mx-4 -my-6 btn">
+                        Get Started
+                    </button></Link>
 
-             
+
             </div>
         </nav>
     );
