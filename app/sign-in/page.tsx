@@ -10,7 +10,7 @@ import React, { useState, useRef } from 'react';
 
 
 
-const page = () => {
+const HomePage = () => {
   
     const [otp, setOtp] = useState(Array(6).fill(''));
     const inputRefs = Array.from({ length: 6 }, () => useRef<HTMLInputElement | null>(null));
@@ -182,4 +182,4 @@ const page = () => {
   )
 }
 
-export default page
+export default HomePage
