@@ -4,34 +4,33 @@
 import Image from 'next/image'
 import logo from "@/public/render.svg"
 import profile from "./profile.jpg"
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 
 
 
 
 
-const HomePage = () => {
+const Page = () => {
+
   const [otp, setOtp] = useState(Array(6).fill(''));
+  const inputRefs = useRef<(HTMLInputElement | null)[]>([]);
 
-  const createRef = () => useRef<HTMLInputElement | null>(null);
-  const inputRefs = Array.from({ length: 6 }, createRef);
+  useEffect(() => {
+    inputRefs.current = inputRefs.current.slice(0, 6);
+  }, []);
 
+  const handleOtpChange = (index: any, event: any) => {
+    const newOtp = [...otp];
+    newOtp[index] = event.target.value;
+    setOtp(newOtp);
 
-      const handleOtpChange = (index: any, event: any) => {
-        const newOtp = [...otp];
-        newOtp[index] = event.target.value;
-        setOtp(newOtp);
+    if (event.target.value.length === 1 && index < 5) {
+      inputRefs.current[index + 1]?.focus();
+    } else if (event.target.value.length === 0 && index > 0) {
+      inputRefs.current[index - 1]?.focus();
+    }
+  };
 
-        if (event.target.value.length === 1 && index < 5) {
-          if (inputRefs[index + 1]?.current) {
-            inputRefs[index + 1]?.current?.focus();
-          }
-        } else if (event.target.value.length === 0 && index > 0) {
-          if (inputRefs[index - 1]?.current) {
-            inputRefs[index - 1]?.current?.focus();
-          }
-        }
-     };
   return (
     <div className='flex justify-between items-start w-full'>
 
@@ -148,21 +147,20 @@ const HomePage = () => {
                 <h2 className="text-lg  mb-4">Enter OTP</h2>
                 <div className="grid grid-cols-6 gap-2">
                   {otp.map((digit, index) => (
-                   <input
+                    <input
                       key={index}
-                      ref={inputRefs[index]}
+                      ref={(el) => inputRefs.current[index] = el}
                       type="text"
-                      className={`w-10 h-10 text-lg border border-gray-300 rounded-md text-center outline-none ${
-                        index === otp.findIndex((_, i) => i === index && inputRefs[i]?.current?.contains(document.activeElement))
+                      className={`w-10 h-10 text-lg border border-gray-300 rounded-md text-center outline-none ${index === otp.findIndex((_, i) => i === index && inputRefs.current[i] === document.activeElement)
                           ? 'border-blue-500'
                           : ''
-                      }`}
+                        }`}
                       maxLength={1}
                       pattern="[0-9]"
                       inputMode="numeric"
                       value={digit}
                       onChange={(event) => handleOtpChange(index, event)}
-                   />
+                    />
                   ))}
                 </div>
                 <p className="text-sm text-gray-500 mt-2">Enter the 6-digit code sent to your phone.</p>
@@ -184,4 +182,4 @@ const HomePage = () => {
   )
 }
 
-export default HomePage
+export default Page
