@@ -151,7 +151,7 @@ const Page = () => {
                       key={index}
                       ref={(el) => inputRefs.current[index] = el}
                       type="text"
-                      className={`w-10 h-10 text-lg border border-gray-300 rounded-md text-center outline-none ${index === otp.findIndex((_, i) => i === index && inputRefs.current[i] === document.activeElement)
+                      className={`w-10 h-10 text-lg border border-gray-300 rounded-md text-center outline-none ${index === otp.findIndex((_, i) => i === index && typeof document !== 'undefined' && inputRefs.current[i] === document.activeElement)
                           ? 'border-blue-500'
                           : ''
                         }`}
