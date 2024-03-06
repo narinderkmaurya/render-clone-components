@@ -34,7 +34,7 @@ const White = () => {
         <div className={` ${regular.className} bg-white py-16 `} >
             <div className=" text-[#544D49]  text-[1.25rem] px-64 space-y-6 leading-[2.5rem] ">
                 <p className='pr-20'>
-                    Welcome to the  FDIC 24, a once-in a-year opportunity that you won't want to
+                    Welcome to the  FDIC 24, a once-in a-year opportunity that you won&apos;t want to
                     miss!
                 </p>
                 <p className='pr-12'>

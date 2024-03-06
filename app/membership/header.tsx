@@ -41,7 +41,7 @@ const Header = () => {
 
       <p className={`  text-[1.5rem] text-[#ffffff60] `}>
         Designed for those students serious about landing dream <br />
-        internships in tech. We can't wait to see what you can achieve
+        internships in tech. We can&apos;t wait to see what you can achieve
       </p>
 
       <button className=' bg-[#6941c6] w-[140px] items-center text-center h-[50px] text-[1.125rem] rounded-[5px] ' >
