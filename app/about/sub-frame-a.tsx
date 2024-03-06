@@ -44,9 +44,9 @@ const SubFrameA: NextPage = () => {
           <div className="h-[100px] w-[100px] relative bg-gainsboro-500 hidden" />
           <motion.div initial="hidden" animate={inView ? 'visible' : 'hidden'} variants={imageVariants}>
             <Image
-              className="h-[55px] w-[61.7px] relative z-[2]"
+              className="h-[55px] w-[61.7px] relative z-[2] bg-[#4a4a4a]" width={50} height={50}
               alt=""
-              src={react}
+              src="https://ik.imagekit.io/internquest/React-min.svg?updatedAt=1709201833510"
             />
           </motion.div>
         </div>

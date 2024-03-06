@@ -50,7 +50,7 @@ export const Header = () => {
           </div>
         </div>
         <div className="flex justify-end w-full -ml-[100px] relative">
-          <Image src={c} alt='c' />
+          <Image src="https://ik.imagekit.io/internquest/C-min.svg?updatedAt=1709201833232" width={100} height={100} className="w-[100px] h-[100px] object-contain py-3 px-3  bg-[#4a4a4a]" alt='c' />
         </div>
       </motion.div>
       <motion.div className="items-center justify-center pt-[220px] flex flex-col space-y-12 w-full" initial="hidden" animate={inView ? "visible" : "hidden"} variants={animationVariant}>

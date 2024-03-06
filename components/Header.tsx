@@ -45,9 +45,9 @@ const medium = newLocal(
 const Header = () => {
     return (
         <header className=" bg-[#1B1B1B] overflow-hidden">
-            <div className="flex h-0 2xl:left-[130px] relative">
-                <div className="w-[100px] h-[50px] br border-[#d7d7d7] " />
-                <div className="w-[120px] h-[50px]  br  border-[#d7d7d7]  bg-[#D9D9D940]" />
+            <div className="flex h-0 2xl:left-[130px] relative ">
+                <div className="w-[100px] h-[50px] br  border-[#d7d7d7] " />
+                <div className="w-[120px] h-[50px] br  border-[#d7d7d7]  bg-[#D9D9D940]" />
             </div>
 
             <div className="left-[500px] relative h-0">
@@ -55,7 +55,7 @@ const Header = () => {
             </div>
 
 
-            <div className="left-[725px] 2xl:left-[846px] relative h-0 border-[#d7d7d7] ">
+            <div className="left-[725px] 2xl:left-[848px] relative h-0 border-[#d7d7d7] ">
                 <div className="w-[355px] h-[50px] br   " />
             </div>
 
@@ -63,18 +63,18 @@ const Header = () => {
             <motion.div className="h-0  lg:top-[51px] 2xl:left-[130px] 2xl:top-[51px] relative " initial={{ scale: 0.9 }}
                 animate={{ scale: 1 }}
                 transition={{ duration: 1, ease: "easeInOut" }}>
-                <Image src={java} alt="" />
+                <Image src="https://ik.imagekit.io/internquest/java-min.svg?updatedAt=1709201833586" width={100} height={100} className="w-[100px] h-[100px] py-4 object-contain bg-[#4a4a4a]"  alt="" />
             </motion.div>
-            <motion.div className="h-0 right-0 top-[145px] absolute justify-end " initial={{ scale: 0.9 }}
+            <motion.div className="h-0 right-0 top-[135px] absolute justify-end " initial={{ scale: 0.9 }}
                 animate={{ scale: 1 }}
                 transition={{ duration: 1, ease: "easeInOut" }}>
-                <Image src={npm} alt="" className="h-[100px] w-[200px] object-left object-cover 2xl:hidden" />
+                <Image src="https://ik.imagekit.io/internquest/npm-min.svg?updatedAt=1709201833487" alt="" width={200} height={100} className="h-[100px] w-[200px]  px-6  object-contain 2xl:hidden bg-[#4a4a4a]" />
                 <Image src={npm} alt="" className="2xl:block hidden" />
             </motion.div>
-            <motion.div className="h-0 right-[200px] lg:right-[200px] 2xl:right-[334px]  top-[245px] absolute justify-end" initial={{ scale: 0.9 }}
+            <motion.div className="h-0 right-[200px] lg:right-[200px] 2xl:right-[333px]  top-[235px] absolute justify-end" initial={{ scale: 0.9 }}
                 animate={{ scale: 1 }}
                 transition={{ duration: 1, ease: "easeInOut" }}>
-                <Image src={ex} alt="ex" />
+                <Image src="https://ik.imagekit.io/internquest/express-min.svg?updatedAt=1709201833468" width={100} height={100} alt="ex" className="w-[100px] h-[100px] bg-[#4a4a4a] px-4 object-contain " />
             </motion.div>
             <motion.div className="h-0 top-[250px] 2xl:top-52 relative left-[270px] 2xl:left-[350px] " initial={{ scale: 0.9 }}
                 animate={{ scale: 1 }}
