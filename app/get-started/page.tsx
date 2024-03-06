@@ -1,183 +1,316 @@
-"use client";
+import React from 'react'
+import Image from 'next/image'
+import logo from "@/public/render.svg"
+import profile from "./profile.jpg"
+import github from "./github.svg"
+import gitlab from "./gitlab.svg"
+import google from "./google.svg"
+import Link from 'next/link'
 
 
-import Image from "next/image";
-import image from "@/public/talent.jpg"
-import first from "@/public/single.webp"
-import second from "@/public/two.webp"
-import third from "@/public/twomore.webp"
-import logo from "@/public/talent.svg"
-import profile from "@/public/profile.webp";
-import { useEffect, useRef } from "react";
-import Popover from "@/components/Popover";
-import Footer from "@/components/Footer";
-import Marquee from "react-fast-marquee";
 
 
-export default function GetStarted() {
 
-  const marqueeUpRef = useRef<HTMLDivElement>(null);
-  const marqueeDownRef = useRef<HTMLDivElement>(null);
-  useEffect(() => {
-    const marqueeUp = marqueeUpRef.current;
-    const marqueeDown = marqueeDownRef.current;
-    if (marqueeUp && marqueeDown) {
-      const contentUp = marqueeUp.querySelector('.content');
-      const contentDown = marqueeDown.querySelector('.content');
-      if (contentUp && contentDown) {
-        const contentUpHeight = contentUp.clientHeight;
-        const contentDownHeight = contentDown.clientHeight;
-        (contentUp as HTMLElement).style.animationDuration = `${contentUpHeight * 0.5}s`;
-        (contentDown as HTMLElement).style.animationDuration = `${contentDownHeight * 0.5}s`;
-      }
-    }
-  }, []);
+
+
+const page = () => {
   return (
-    <div className="overflow-hidden">
-      <div className="lg:hidden">
-        <div className="flex flex-col items-center justify-center py-12">
-          <nav>
-            <Image src={logo} alt="logo" />
-          </nav>
-          <div className="space-y-6 pt-24">
-            <h1 className=" text-[40px] px-12 text-center  lg:text-[3.5rem] leading-[1.2]">
-              You"ll never <span className="italic font-thin">build</span> alone.
-            </h1>
-            <p className="text-[#536471] px-4 lg:text-[1.25rem] leading-[1.5]">
-              Where builders commit to goals, share their progress and find the support they need to succeed.
-            </p>
-            <div className="justify-center w-full text-center">
-              <button className="bg-[#7857ed] py-[0.88rem] px-[2rem] rounded-[50px] font-semibold text-white">
-                Launch App
+    <div className="">
+      <div className="sm:hidden pt-6 text-black">
+        <nav className='px-4'>
+          <Image src={logo} alt="" />
+        </nav>
+
+        <div className="pt-16 px-4">
+
+          <h1 className='text-[1.75rem] font-medium '>
+            Create an account
+          </h1>
+          <div className="text-center pt-4">
+            <div className="flex gap-4 items-start">
+              <button className='border hover:bg-black px-6 py-3 flex gap-2 hover:text-white transition-opacity items-center text-[14px]'>
+                <Image src={github} alt="" />  GitHub
+              </button>
+              <div className="">
+                <button className='border hover:bg-black px-6 py-3 flex gap-2 hover:text-white transition-opacity items-center text-[14px]'>
+                  <Image src={gitlab} alt="" />  GitLab
+                </button>
+                <p className='text-[14px] pt-6'> or</p>
+              </div>
+              <button className='border hover:bg-black px-6 py-3 flex gap-2 hover:text-white transition-opacity items-center text-[14px]'>
+                <Image src={google} alt="" />  Google
               </button>
             </div>
-          </div>
-          <div className="space-y-4 px-4 pt-20">
-            <p className="font-medium  text-center">
-              Join +6,000 builders who already achieved their goals.
-            </p>
-            <div className=" flex flex-col px-8 gap-4 ">
-              <div className="flex w-14 h-14">
-                <Popover image={profile} line1="Name Here" line2="Profile Info Here" />
-                <Popover image={profile} line1="Name Here" line2="Profile Info Here" />
-                <Popover image={profile} line1="Name Here" line2="Profile Info Here" />
-                <Popover image={profile} line1="Name Here" line2="Profile Info Here" />
-                <Popover image={profile} line1="Name Here" line2="Profile Info Here" />
+            <div className="max-w-[400px] text-start">
+
+              <div className="flex flex-col gap-4 pt-2">
+                <label htmlFor="email" className='text-[14px]'>Email</label>
+                <input type="email" id="email" className='border border-[#e2e2e2] px-4 py-3 text-[14px]' />
               </div>
-              <div className="flex w-14 h-14">
-                <Popover image={profile} line1="Name Here" line2="Profile Info Here" />
-                <Popover image={profile} line1="Name Here" line2="Profile Info Here" />
-                <Popover image={profile} line1="Name Here" line2="Profile Info Here" />
-                <Popover image={profile} line1="Name Here" line2="Profile Info Here" />
-                <Popover image={profile} line1="Name Here" line2="Profile Info Here" />
+              <div className="flex flex-col gap-4 pt-6">
+                <label htmlFor="password" className='text-[14px]'>Password</label>
+                <input type="password" id="password" className='border border-[#e2e2e2] px-4 py-3 text-[14px]' />
+              </div>
+              <button className='border bg-black px-6 py-3 flex gap-2 text-white hover:bg-[#8a05ff] transition-opacity items-center text-[14px] mt-8'>
+                Create Account
+              </button>
+
+              <div className="text-[#4d4d4d] pt-6  space-y-2">
+                <p className='text-[14px]'>
+                  By signing up you agree to our  <Link href="#" className='hover:bg-[#e6daff] underline ' >
+                    terms of service</Link>.
+                </p>
+
+                <p className='text-[14px]'>
+                  Already have an account?  <Link href="#" className='hover:bg-[#e6daff] underline ' >
+                    Sign In</Link>.
+                </p>
+
+
+                <p className='text-[12px] pt-4'>
+                  This site is protected by <Link href="#" className='hover:bg-[#e6daff] underline ' >
+                    hCaptcha</Link>. Its <Link href="#" className='hover:bg-[#e6daff] underline ' >
+                    Privacy Policy</Link> and Terms of Service apply.
+                </p>
               </div>
             </div>
+
           </div>
+
         </div>
 
+        <div className="pt-20">
+          <div className="flex">
+            <div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2]   border-l-0" />
+            <div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2]   border-l-0" /><div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2]   border-l-0" /><div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2]   border-l-0" /><div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2]   border-l-0" /><div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2] border-l-0" /><div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2] border-l-0" /><div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2]  border-l-0" />
+          </div>
+          <div className="flex">
+            <div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2] border-t-0  border-l-0" />
+            <div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2] border-t-0  border-l-0" /><div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2] border-t-0  border-l-0" /><div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2] border-t-0  border-l-0" /><div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2] border-t-0  border-l-0" /><div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2] border-t-0  border-l-0" /><div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2] border-t-0  border-l-0" /><div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2] border-t-0  border-l-0" />
+          </div>
+          <div className="flex">
+            <div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2] border-t-0  border-l-0" />
+            <div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2] border-t-0  border-l-0" /><div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2] border-t-0  border-l-0" /><div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2] border-t-0  border-l-0" /><div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2] border-t-0  border-l-0" /><div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2] border-t-0  border-l-0" /><div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2] border-t-0  border-l-0" /><div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2] border-t-0  border-l-0" />
+          </div>
+          <div className="flex">
+            <div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2] border-t-0  border-l-0" />
+            <div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2] border-t-0  border-l-0" /><div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2] border-t-0  border-l-0" /><div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2] border-t-0  border-l-0" /><div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2] border-t-0  border-l-0" /><div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2] border-t-0  border-l-0" /><div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2] border-t-0  border-l-0" /><div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2] border-t-0  border-l-0" />
+          </div>
+          <div className="flex">
+            <div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2] border-t-0  border-l-0" />
+            <div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2] border-t-0  border-l-0" /><div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2] border-t-0  border-l-0" /><div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2] border-t-0  border-l-0" /><div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2] border-t-0  border-l-0" /><div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2] border-t-0  border-l-0" /><div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2] border-t-0  border-l-0" /><div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2] border-t-0  border-l-0" />
+          </div>
+          <div className="flex">
+            <div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2] border-t-0  border-l-0" />
+            <div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2] border-t-0  border-l-0" /><div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2] border-t-0  border-l-0" /><div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2] border-t-0  border-l-0" /><div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2] border-t-0  border-l-0" /><div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2] border-t-0  border-l-0" /><div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2] border-t-0  border-l-0" /><div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2] border-t-0  border-l-0" />
+          </div>
+          <div className="flex">
+            <div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2] border-t-0  border-l-0" />
+            <div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2] border-t-0  border-l-0" /><div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2] border-t-0  border-l-0" /><div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2] border-t-0  border-l-0" /><div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2] border-t-0  border-l-0" /><div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2] border-t-0  border-l-0" /><div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2] border-t-0  border-l-0" /><div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2] border-t-0  border-l-0" />
+          </div>
 
-        <div className="">
-          <Marquee  className="py-4">
-            <div className="flex ">
-              <Image src={image} alt="image" className="border hover:border-2 rounded-2xl shadow-md hover:scale-95 w-[200px] mx-2  transition-all duration-150 ease-in-out hover:shadow-none" />
-              <Image src={first} alt="image" className="border hover:border-2 rounded-2xl shadow-md hover:scale-95 w-[200px] mx-2  transition-all duration-150 ease-in-out hover:shadow-none" />
-              <Image src={second} alt="image" className="border hover:border-2 rounded-2xl shadow-md hover:scale-95 w-[200px] mx-2  transition-all duration-150 ease-in-out hover:shadow-none" />
-              <Image src={third} alt="image" className="border hover:border-2 rounded-2xl shadow-md hover:scale-95 w-[200px] mx-2  transition-all duration-150 ease-in-out hover:shadow-none" />
-              <Image src={image} alt="image" className="border hover:border-2 rounded-2xl shadow-md hover:scale-95 w-[200px] mx-2  transition-all duration-150 ease-in-out hover:shadow-none" />
-              <Image src={first} alt="image" className="border hover:border-2 rounded-2xl shadow-md hover:scale-95 w-[200px] mx-2  transition-all duration-150 ease-in-out hover:shadow-none" />
-              <Image src={second} alt="image" className="border hover:border-2 rounded-2xl shadow-md hover:scale-95 w-[200px] mx-2  transition-all duration-150 ease-in-out hover:shadow-none" />
-              <Image src={third} alt="image" className="border hover:border-2 rounded-2xl shadow-md hover:scale-95 w-[200px] mx-2  transition-all duration-150 ease-in-out hover:shadow-none" />
-            </div>
-          </Marquee>
+
+          <div className="flex">
+            <div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2] border-t-0  border-l-0" />
+            <div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2] border-t-0  border-l-0" /><div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2] border-t-0  border-l-0" /><div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2] border-t-0  border-l-0" /><div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2] border-t-0  border-l-0" /><div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2] border-t-0  border-l-0" /><div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2] border-t-0  border-l-0" /><div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2] border-t-0  border-l-0" />
+          </div>
+          <div className="flex">
+            <div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2] border-t-0  border-l-0" />
+            <div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2] border-t-0  border-l-0" /><div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2] border-t-0  border-l-0" /><div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2] border-t-0  border-l-0" /><div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2] border-t-0  border-l-0" /><div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2] border-t-0  border-l-0" /><div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2] border-t-0  border-l-0" /><div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2] border-t-0  border-l-0" />
+          </div>
+          <div className="flex">
+            <div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2] border-t-0  border-l-0" />
+            <div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2] border-t-0  border-l-0" /><div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2] border-t-0  border-l-0" /><div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2] border-t-0  border-l-0" /><div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2] border-t-0  border-l-0" /><div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2] border-t-0  border-l-0" /><div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2] border-t-0  border-l-0" /><div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2] border-t-0  border-l-0" />
+          </div>
+          <div className="flex">
+            <div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2] border-t-0  border-l-0" />
+            <div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2] border-t-0  border-l-0" /><div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2] border-t-0  border-l-0" /><div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2] border-t-0  border-l-0" /><div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2] border-t-0  border-l-0" /><div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2] border-t-0  border-l-0" /><div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2] border-t-0  border-l-0" /><div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2] border-t-0  border-l-0" />
+          </div>
+          <div className="flex">
+            <div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2] border-t-0  border-l-0" />
+            <div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2] border-t-0  border-l-0" /><div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2] border-t-0  border-l-0" /><div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2] border-t-0  border-l-0" /><div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2] border-t-0  border-l-0" /><div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2] border-t-0  border-l-0" /><div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2] border-t-0  border-l-0" /><div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2] border-t-0  border-l-0" />
+          </div>
+          <div className="flex">
+            <div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2] border-t-0  border-l-0" />
+            <div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2] border-t-0  border-l-0" /><div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2] border-t-0  border-l-0" /><div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2] border-t-0  border-l-0" /><div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2] border-t-0  border-l-0" /><div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2] border-t-0  border-l-0" /><div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2] border-t-0  border-l-0" /><div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2] border-t-0  border-l-0" />
+          </div>
+          <div className="flex">
+            <div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2] border-t-0  border-l-0" />
+            <div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2] border-t-0  border-l-0" /><div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2] border-t-0  border-l-0" /><div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2] border-t-0  border-l-0" /><div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2] border-t-0  border-l-0" /><div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2] border-t-0  border-l-0" /><div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2] border-t-0  border-l-0" /><div className="min-w-[50px] flex-1 min-h-[50px] border border-[#e2e2e2] border-t-0  border-l-0" />
+          </div>
+
+
         </div>
 
-
-        <div className="">
-          <Marquee  direction="right" className="py-4">
-            <div className="flex ">
-              <Image src={image} alt="image" className="border hover:border-2 rounded-2xl shadow-md hover:scale-95 w-[200px] mx-2  transition-all duration-150 ease-in-out hover:shadow-none" />
-              <Image src={first} alt="image" className="border hover:border-2 rounded-2xl shadow-md hover:scale-95 w-[200px] mx-2  transition-all duration-150 ease-in-out hover:shadow-none" />
-              <Image src={second} alt="image" className="border hover:border-2 rounded-2xl shadow-md hover:scale-95 w-[200px] mx-2  transition-all duration-150 ease-in-out hover:shadow-none" />
-              <Image src={third} alt="image" className="border hover:border-2 rounded-2xl shadow-md hover:scale-95 w-[200px] mx-2  transition-all duration-150 ease-in-out hover:shadow-none" />
-              <Image src={image} alt="image" className="border hover:border-2 rounded-2xl shadow-md hover:scale-95 w-[200px] mx-2  transition-all duration-150 ease-in-out hover:shadow-none" />
-              <Image src={first} alt="image" className="border hover:border-2 rounded-2xl shadow-md hover:scale-95 w-[200px] mx-2  transition-all duration-150 ease-in-out hover:shadow-none" />
-              <Image src={second} alt="image" className="border hover:border-2 rounded-2xl shadow-md hover:scale-95 w-[200px] mx-2  transition-all duration-150 ease-in-out hover:shadow-none" />
-              <Image src={third} alt="image" className="border hover:border-2 rounded-2xl shadow-md hover:scale-95 w-[200px] mx-2  transition-all duration-150 ease-in-out hover:shadow-none" />
-            </div>
-          </Marquee>
+        <div className="  relative">
+          <div className=" w-[360px] h-[850px] bg-white  z-30"></div>
         </div>
-
-        <Footer/>
       </div>
 
 
 
 
-      <div className="hidden md:block">
-        <div className="min-h-screen overflow-hidden text-gray-900 flex">
-          <div className="container mx-auto w-3/4">
-            <div className="py-12 pl-28 flex flex-col justify-between h-full">
-              <nav>
-                <Image src={logo} alt="logo" />
-              </nav>
-              <div className="space-y-6">
-                <h1 className="text-[3.5rem] leading-[1.2]">
-                  You"ll never <span className="italic font-light">build</span> alone.
-                </h1>
-                <p className="text-[1.25rem] leading-[1.5]">
-                  Where builders commit to goals, share their progress and find the support they need to succeed.
-                </p>
-                <button className="bg-[#7857ed] py-[0.88rem] px-[2rem] rounded-[50px] font-semibold text-white">
-                  Launch App
+
+      {/* for large devices */}
+      <div className='md:flex justify-between items-start w-full hidden '>
+        <div className="text-black flex pl-4 py-6 flex-col justify-between min-h-screen ">
+          <Image src={logo} alt="logo" />
+
+
+          <div className="pl-12">
+            <h1 className='text-[2rem] tracking-[-0.28px] font-medium'>
+              Create an account
+            </h1>
+
+            <div className="text-center pt-4">
+              <div className="flex gap-4 items-start">
+                <button className='border hover:bg-black px-6 py-3 flex gap-2 hover:text-white transition-opacity items-center text-[14px]'>
+                  <Image src={github} alt="" />  GitHub
+                </button>
+                <div className="">
+                  <button className='border hover:bg-black px-6 py-3 flex gap-2 hover:text-white transition-opacity items-center text-[14px]'>
+                    <Image src={gitlab} alt="" />  GitLab
+                  </button>
+                  <p className='text-[14px] pt-6'> or</p>
+                </div>
+                <button className='border hover:bg-black px-6 py-3 flex gap-2 hover:text-white transition-opacity items-center text-[14px]'>
+                  <Image src={google} alt="" />  Google
                 </button>
               </div>
 
-              <div className="space-y-4 bottom-12 relative">
-                <p className="font-semibold">
-                  Join +6,000 builders who already achieved their goals.
+
+            </div>
+
+            <div className="max-w-[400px]">
+
+              <div className="flex flex-col gap-4 pt-2">
+                <label htmlFor="email" className='text-[14px]'>Email</label>
+                <input type="email" id="email" className='border border-[#e2e2e2] px-4 py-3 text-[14px]' />
+              </div>
+              <div className="flex flex-col gap-4 pt-6">
+                <label htmlFor="password" className='text-[14px]'>Password</label>
+                <input type="password" id="password" className='border border-[#e2e2e2] px-4 py-3 text-[14px]' />
+              </div>
+              <button className='border bg-black px-6 py-3 flex gap-2 text-white hover:bg-[#8a05ff] transition-opacity items-center text-[14px] mt-8'>
+                Create Account
+              </button>
+
+              <div className="text-[#4d4d4d] pt-6  space-y-2">
+                <p className='text-[14px]'>
+                  By signing up you agree to our  <Link href="#" className='hover:bg-[#e6daff] underline ' >
+                    terms of service</Link>.
                 </p>
-                <div className="flex gap-2 w-10 h-10">
-                  <Popover image={profile} line1="Name Here" line2="Profile Info Here" />
-                  <Popover image={profile} line1="Name Here" line2="Profile Info Here" />
-                  <Popover image={profile} line1="Name Here" line2="Profile Info Here" />
-                  <Popover image={profile} line1="Name Here" line2="Profile Info Here" />
-                  <Popover image={profile} line1="Name Here" line2="Profile Info Here" />
-                  <Popover image={profile} line1="Name Here" line2="Profile Info Here" />
-                  <Popover image={profile} line1="Name Here" line2="Profile Info Here" />
-                  <Popover image={profile} line1="Name Here" line2="Profile Info Here" />
-                  <Popover image={profile} line1="Name Here" line2="Profile Info Here" />
-                  <Popover image={profile} line1="Name Here" line2="Profile Info Here" />
-                </div>
+
+                <p className='text-[14px]'>
+                  Already have an account?  <Link href="#" className='hover:bg-[#e6daff] underline ' >
+                    Sign In</Link>.
+                </p>
+
+
+                <p className='text-[12px] pt-8'>
+                  This site is protected by <Link href="#" className='hover:bg-[#e6daff] underline ' >
+                    hCaptcha</Link>. Its <Link href="#" className='hover:bg-[#e6daff] underline ' >
+                    Privacy Policy</Link> and Terms of Service apply.
+                </p>
               </div>
             </div>
           </div>
-          <div ref={marqueeUpRef} className="marquee-up w-1/4 2xl:w-1/4 mr-4 lg:w-[450px] lg:mr-6 lg:relative lg:left-[150px]  2xl:left-0">
-            <div className="content">
-              <Image src={image} alt="image" className="border hover:border-2 rounded-2xl shadow-md hover:scale-95 w-[450px] my-3  transition-all duration-150 ease-in-out hover:shadow-none" />
-              <Image src={first} alt="image" className="border hover:border-2 rounded-2xl shadow-md hover:scale-95 w-[450px] my-3  transition-all duration-150 ease-in-out hover:shadow-none" />
-              <Image src={second} alt="image" className="border hover:border-2 rounded-2xl shadow-md hover:scale-95 w-[450px] my-3  transition-all duration-150 ease-in-out hover:shadow-none" />
-              <Image src={third} alt="image" className="border hover:border-2 rounded-2xl shadow-md hover:scale-95 w-[450px] my-3  transition-all duration-150 ease-in-out hover:shadow-none" />
-              <Image src={image} alt="image" className="border hover:border-2 rounded-2xl shadow-md hover:scale-95 w-[450px] my-3  transition-all duration-150 ease-in-out hover:shadow-none" />
-              <Image src={first} alt="image" className="border hover:border-2 rounded-2xl shadow-md hover:scale-95 w-[450px] my-3  transition-all duration-150 ease-in-out hover:shadow-none" />
-              <Image src={second} alt="image" className="border hover:border-2 rounded-2xl shadow-md hover:scale-95 w-[450px] my-3  transition-all duration-150 ease-in-out hover:shadow-none" />
-              <Image src={third} alt="image" className="border hover:border-2 rounded-2xl shadow-md hover:scale-95 w-[450px] my-3  transition-all duration-150 ease-in-out hover:shadow-none" />
-            </div>
+        </div>
+
+        <div className="flex flex-col h-0 w-[1/2] lg:w-[1/3] ">
+          <div className="flex justify-end">
+            <div className='w-[90px] h-[90px] border border-[#e2e2e2] border-r-0  hidden' />
+            <div className='w-[90px] h-[90px] border border-[#e2e2e2] border-r-0 3xl:hidden hidden' />
+            <div className='w-[90px] h-[90px] border border-[#e2e2e2] border-r-0 3xl:hidden hidden' />
+            <div className='w-[90px] h-[90px] border border-[#e2e2e2] border-r-0 xl:block hidden' />
+            <div className='w-[90px] h-[90px] border border-[#e2e2e2] border-r-0 xl:block hidden' />
+            <div className='w-[90px] h-[90px] border border-[#e2e2e2] border-r-0 ' />
+            <div className='w-[90px] h-[90px] border border-[#e2e2e2] border-r-0 ' /><div className='w-[90px] h-[90px] border border-[#e2e2e2] border-r-0 ' /><div className='w-[90px] h-[90px] border border-[#e2e2e2] border-r-0 ' /><div className='w-[90px] h-[90px] border border-[#e2e2e2] border-r-0 ' /><div className='w-[90px] h-[90px] border border-[#e2e2e2] border-r-0 ' /><div className='w-[90px] h-[90px] border border-[#e2e2e2] border-r-0 ' /><div className='w-[90px] h-[90px] border border-[#e2e2e2] border-r-0 ' />
+            <div className='w-[90px] h-[90px] border border-[#e2e2e2] border-r-0 border-t-0 ' />
           </div>
-          <div ref={marqueeUpRef} className="marquee-down lg:w-[450px] lg:relative lg:left-[150px] 2xl:left-0 ">
-            <div className="content">
-              <Image src={image} alt="image" className="border hover:border-2 rounded-2xl shadow-md hover:scale-95 w-[450px] my-3  transition-all duration-150 ease-in-out hover:shadow-none" />
-              <Image src={first} alt="image" className="border hover:border-2 rounded-2xl shadow-md hover:scale-95 w-[450px] my-3  transition-all duration-150 ease-in-out hover:shadow-none" />
-              <Image src={second} alt="image" className="border hover:border-2 rounded-2xl shadow-md hover:scale-95 w-[450px] my-3  transition-all duration-150 ease-in-out hover:shadow-none" />
-              <Image src={third} alt="image" className="border hover:border-2 rounded-2xl shadow-md hover:scale-95 w-[450px] my-3  transition-all duration-150 ease-in-out hover:shadow-none" />
-              <Image src={image} alt="image" className="border hover:border-2 rounded-2xl shadow-md hover:scale-95 w-[450px] my-3  transition-all duration-150 ease-in-out hover:shadow-none" />
-              <Image src={first} alt="image" className="border hover:border-2 rounded-2xl shadow-md hover:scale-95 w-[450px] my-3  transition-all duration-150 ease-in-out hover:shadow-none" />
-              <Image src={second} alt="image" className="border hover:border-2 rounded-2xl shadow-md hover:scale-95 w-[450px] my-3  transition-all duration-150 ease-in-out hover:shadow-none" />
-              <Image src={third} alt="image" className="border hover:border-2 rounded-2xl shadow-md hover:scale-95 w-[450px] my-3  transition-all duration-150 ease-in-out hover:shadow-none" />
-            </div>
+          <div className="flex justify-end">
+            <div className='w-[90px] h-[90px] border border-[#e2e2e2] border-r-0 border-t-0 xl:block 3xl:hidden hidden' />
+            <div className='w-[90px] h-[90px] border border-[#e2e2e2] border-r-0 border-t-0 3xl:hidden xl:block hidden' />
+            <div className='w-[90px] h-[90px] border border-[#e2e2e2] border-r-0 border-t-0 3xl:hidden' />
+
+            <div className='w-[90px] h-[90px] border border-[#e2e2e2] border-r-0  border-t-0 3xl:hidden hidden' />
+            <div className='w-[90px] h-[90px] border border-[#e2e2e2] border-r-0  border-t-0   2xl:block hidden' />
+            <div className='w-[90px] h-[90px] border border-[#e2e2e2] border-r-0  border-t-0  3xl:block hidden' />
+            <div className='w-[90px] h-[90px] border border-[#e2e2e2] border-r-0  border-t-0  3xl:block hidden' />
+            <div className='w-[90px] h-[90px] border border-[#e2e2e2] border-r-0 border-t-0 ' /><div className='w-[90px] h-[90px] border border-[#e2e2e2] border-r-0 border-t-0 ' /><div className='w-[90px] h-[90px] border border-[#e2e2e2] border-r-0 border-t-0 ' /><div className='w-[90px] h-[90px] border border-[#e2e2e2] border-r-0 border-t-0 ' /><div className='w-[90px] h-[90px] border border-[#e2e2e2] border-r-0 border-t-0 ' />
+            <div className='w-[90px] h-[90px] border border-[#e2e2e2] border-r-0 border-t-0 ' />
+            <div className='w-[90px] h-[90px] border border-[#e2e2e2] border-r-0 border-t-0 ' />
+          </div>
+          <div className="flex justify-end">
+            <div className='w-[90px] h-[90px] border border-[#e2e2e2] border-r-0 border-t-0 3xl:hidden' />
+            <div className='w-[90px] h-[90px] border border-[#e2e2e2] border-r-0 border-t-0 xl:block hidden 3xl:hidden' />
+            <div className='w-[90px] h-[90px] border border-[#e2e2e2] border-r-0 border-t-0 xl:block hidden 3xl:hidden' />
+            <div className='w-[90px] h-[90px] border border-[#e2e2e2] border-r-0  border-t-0  3xl:block hidden ' />
+            <div className='w-[90px] h-[90px] border border-[#e2e2e2] border-r-0  border-t-0  3xl:block hidden' />
+            <div className='w-[90px] h-[90px] border border-[#e2e2e2] border-r-0  border-t-0  3xl:block hidden' />
+            <div className='w-[90px] h-[90px] border border-[#e2e2e2] border-r-0 border-t-0 ' /><div className='w-[90px] h-[90px] border border-[#e2e2e2] border-r-0 border-t-0 ' /><div className='w-[90px] h-[90px] border border-[#e2e2e2] border-r-0 border-t-0 ' /><div className='w-[90px] h-[90px] border border-[#e2e2e2] border-r-0 border-t-0 ' /><div className='w-[90px] h-[90px] border border-[#e2e2e2] border-r-0 border-t-0 ' />
+            <div className='w-[90px] h-[90px] border border-[#e2e2e2] border-r-0 border-t-0 ' />
+
+          </div>
+
+          <div className="flex justify-end">
+            <div className='w-[90px] h-[90px] border border-[#e2e2e2] border-r-0  border-t-0 hidden xl:block  3xl:hidden ' />
+            <div className='w-[90px] h-[90px] border border-[#e2e2e2] border-r-0 border-t-0 3xl:hidden hidden' />
+            <div className='w-[90px] h-[90px] border border-[#e2e2e2] border-r-0  border-t-0  3xl:block hidden' />
+            <div className='w-[90px] h-[90px] border border-[#e2e2e2] border-r-0 border-t-0 ' /><div className='w-[90px] h-[90px] border border-[#e2e2e2] border-r-0 border-t-0 ' /><div className='w-[90px] h-[90px] border border-[#e2e2e2] border-r-0 border-t-0 ' /><div className='w-[90px] h-[90px] border border-[#e2e2e2] border-r-0 border-t-0 ' /><div className='w-[90px] h-[90px] border border-[#e2e2e2] border-r-0 border-t-0 ' /><div className='w-[90px] h-[90px] border border-[#e2e2e2] border-r-0 border-t-0 ' /><div className='w-[90px] h-[90px] border border-[#e2e2e2] border-r-0 border-t-0 ' />
+          </div>
+          <div className="flex justify-end">
+            <div className='w-[90px] h-[90px] border border-[#e2e2e2] border-r-0  border-t-0  3xl:hidden hidden' />
+            <div className='w-[90px] h-[90px] border border-[#e2e2e2] border-r-0 border-t-0 xl:block hidden ' />
+
+            <div className='w-[90px] h-[90px] border border-[#e2e2e2] border-r-0 border-t-0 ' /><div className='w-[90px] h-[90px] border border-[#e2e2e2] border-r-0 border-t-0 ' /><div className='w-[90px] h-[90px] border border-[#e2e2e2] border-r-0 border-t-0 ' /><div className='w-[90px] h-[90px] border border-[#e2e2e2] border-r-0 border-t-0 ' /><div className='w-[90px] h-[90px] border border-[#e2e2e2] border-r-0 border-t-0 ' /><div className='w-[90px] h-[90px] border border-[#e2e2e2] border-r-0 border-t-0 ' /><div className='w-[90px] h-[90px] border border-[#e2e2e2] border-r-0 border-t-0 ' />
+          </div>
+          <div className="flex justify-end">
+            <div className='w-[90px] h-[90px] border border-[#e2e2e2] border-r-0  border-t-0 hidden xl:block ' />
+            <div className='w-[90px] h-[90px] border border-[#e2e2e2] border-r-0 border-t-0 ' /><div className='w-[90px] h-[90px] border border-[#e2e2e2] border-r-0 border-t-0 ' /><div className='w-[90px] h-[90px] border border-[#e2e2e2] border-r-0 border-t-0 ' /><div className='w-[90px] h-[90px] border border-[#e2e2e2] border-r-0 border-t-0 ' /><div className='w-[90px] h-[90px] border border-[#e2e2e2] border-r-0 border-t-0 ' /><div className='w-[90px] h-[90px] border border-[#e2e2e2] border-r-0 border-t-0 ' />
+            <div className='w-[90px] h-[90px] border border-[#e2e2e2] border-r-0 border-t-0 ' />
+          </div>
+          <div className="flex justify-end">
+            <div className='w-[90px] h-[90px] border border-[#e2e2e2] border-r-0 3xl:hidden ' />
+            <div className='w-[90px] h-[90px] border border-[#e2e2e2] border-r-0 border-t-0  3xl:hidden xl:block hidden ' />
+            <div className='w-[90px] h-[90px] border border-[#e2e2e2] border-r-0   3xl:block hidden' /><div className='w-[90px] h-[90px] border border-[#e2e2e2] border-r-0  border-t-0  3xl:block hidden' /><div className='w-[90px] h-[90px] border border-[#e2e2e2] border-r-0 border-t-0 ' /><div className='w-[90px] h-[90px] border border-[#e2e2e2] border-r-0 border-t-0 ' /><div className='w-[90px] h-[90px] border border-[#e2e2e2] border-r-0 border-t-0 ' /><div className='w-[90px] h-[90px] border border-[#e2e2e2] border-r-0 border-t-0 ' /><div className='w-[90px] h-[90px] border border-[#e2e2e2] border-r-0 border-t-0 ' /><div className='w-[90px] h-[90px] border border-[#e2e2e2] border-r-0 border-t-0 ' /><div className='w-[90px] h-[90px] border border-[#e2e2e2] border-r-0 border-t-0 ' />
+          </div>
+          <div className="flex justify-end">
+            <div className='w-[90px] h-[90px] border border-[#e2e2e2] border-r-0 border-t-0 3xl:hidden xl:block hidden' />
+            <div className='w-[90px] h-[90px] border border-[#e2e2e2] border-r-0  border-t-0  3xl:block hidden' />
+            <div className='w-[90px] h-[90px] border border-[#e2e2e2] border-r-0 border-t-0 ' /><div className='w-[90px] h-[90px] border border-[#e2e2e2] border-r-0 border-t-0 ' /><div className='w-[90px] h-[90px] border border-[#e2e2e2] border-r-0 border-t-0 ' /><div className='w-[90px] h-[90px] border border-[#e2e2e2] border-r-0 border-t-0 ' /><div className='w-[90px] h-[90px] border border-[#e2e2e2] border-r-0 border-t-0 ' /><div className='w-[90px] h-[90px] border border-[#e2e2e2] border-r-0 border-t-0 ' />
+          </div>
+          <div className="flex justify-end">
+            <div className='w-[90px] h-[90px] border border-[#e2e2e2] border-r-0 border-t-0 ' /><div className='w-[90px] h-[90px] border border-[#e2e2e2] border-r-0 border-t-0 ' />
+          </div>
+
+        </div>
+
+        <div className="h-0 absolute top-[180px] lg:left-[740px] xl:left-[849px] 2xl:left-[906px] ">
+          <div className="w-[360px] h-[450px] border-l border-b border-[#e2e2e2] bg-white z-30 text-black font-medium tracking-[0.2px] p-4 text-[1.25rem] flex flex-col justify-between">
+
+            <p>
+              Building on Render has been a superpower for Watershed. It lets us focus on what matters most — delighting our customers, rather than managing our infrastructure.
+            </p>
+
+            <p>
+              Our engineers can ship features to customers in hours or days instead of weeks or months. Every startup should start on Render.
+            </p>
+
+            <p className='font-mono text-black bg-[#e7fed4] text-[13px] max-w-fit'>
+              Avi Itskovich, Co-founder at Watershed
+            </p>
           </div>
         </div>
-        <Footer />
+        <div className="h-0 absolute top-[540px] xl:-left-[90px] 2xl:-left-[90px] justify-end w-full flex ">
+          <div className="w-[180px] h-[180px] border-l border-b border-[#e2e2e2] ">
+
+            <Image src={profile} alt="profile" />
+          </div>
+        </div>
       </div>
     </div>
-  );
+  )
 }
+
+export default page

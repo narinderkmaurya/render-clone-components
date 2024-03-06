@@ -12,7 +12,13 @@ const nextConfig = {
           hostname: "www.alchemy.com",
           port: "",
         },
+        {
+          protocol: "https",
+          hostname: "ik.imagekit.io",
+          port: "",
+        },
       ],
+      dangerouslyAllowSVG: true,
     },
   };
   

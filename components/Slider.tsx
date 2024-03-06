@@ -90,7 +90,7 @@ const Slider = () => {
     <section className='relative flex flex-col gap-8 overflow-hidden md:gap-12' ref={ref}>
       <Image src='https://www.alchemy.com/_next/image?url=https%3A%2F%2Fwww.datocms-assets.com%2F105223%2F1705608917-testimonial-mobile.png&w=3840&q=75' width={3840} height={75} className='absolute inset-0 z-0 h-full w-full object-cover object-center lg:hidden' alt='mobile-card-bg-image' />
       <div className='z-10 flex flex-col gap-14'>
-        <div className='mx-auto flex w-full max-w-[1170px] flex-col items-center justify-center gap-4 px-6 pt-12 md:px-8 md:pt-16 lg:pt-24'>
+        <div className='mx-auto flex w-full max-w-[1170px] flex-col items-center justify-center gap-4 px-6 pt-12 md:px-8 md:pt-16 '>
           <motion.h2
             className={`lg:text-[2.5rem] md:text-[38px] text-[32px] font-primary leading-none max-w-[770px] text-center text-[#2D2323] ${semi.className}`}
             initial={{ opacity: 0, x: -100 }}

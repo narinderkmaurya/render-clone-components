@@ -12,7 +12,7 @@ const regular = localfont(
   {
     src: [
       {
-        path: "../OTF/GeneralSans-Regular.otf"
+        path: "../OTF/GeneralSans-Medium.otf"
       }
     ],
     variable: "--font-regularGeneral"
@@ -33,9 +33,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressContentEditableWarning suppressHydrationWarning>
       <Providers>
-        <body className={`${regular.variable} font-regular-sans`}>
+        <body className={`  ${regular.className} `}>
           {children}</body>
       </Providers>
 

@@ -55,7 +55,7 @@ const Header = () => {
             </div>
 
 
-            <div className="left-[725px] 2xl:left-[876px] relative h-0 border-[#d7d7d7] ">
+            <div className="left-[725px] 2xl:left-[846px] relative h-0 border-[#d7d7d7] ">
                 <div className="w-[355px] h-[50px] br   " />
             </div>
 
@@ -65,13 +65,13 @@ const Header = () => {
                 transition={{ duration: 1, ease: "easeInOut" }}>
                 <Image src={java} alt="" />
             </motion.div>
-            <motion.div className="h-0 right-0 top-[120px] absolute justify-end " initial={{ scale: 0.9 }}
+            <motion.div className="h-0 right-0 top-[145px] absolute justify-end " initial={{ scale: 0.9 }}
                 animate={{ scale: 1 }}
                 transition={{ duration: 1, ease: "easeInOut" }}>
                 <Image src={npm} alt="" className="h-[100px] w-[200px] object-left object-cover 2xl:hidden" />
                 <Image src={npm} alt="" className="2xl:block hidden" />
             </motion.div>
-            <motion.div className="h-0 right-[200px] lg:right-[200px] 2xl:right-[334px]  top-[220px] absolute justify-end" initial={{ scale: 0.9 }}
+            <motion.div className="h-0 right-[200px] lg:right-[200px] 2xl:right-[334px]  top-[245px] absolute justify-end" initial={{ scale: 0.9 }}
                 animate={{ scale: 1 }}
                 transition={{ duration: 1, ease: "easeInOut" }}>
                 <Image src={ex} alt="ex" />

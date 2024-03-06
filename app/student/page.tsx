@@ -50,15 +50,21 @@ const StudentPage = () => {
     return (
         <div className="" ref={ref}>
             <motion.div
-                className='min-h-[580px] max-h-[580px] bg-[#1B1B1B] pt-40 items-start justify-center w-full flex'
+                className='min-h-[580px] max-h-[580px] bg-[#1B1B1B]  items-center justify-center w-full flex flex-col'
                 initial="hidden"
                 animate={isInView ? "visible" : "hidden"}
                 variants={textVariant}
             >
-                <h1 className={`text-[3rem] ${semi.className} text-center `} >
-                    Complete in coderships to get <br />
+                <h1 className={`text-[3rem] ${semi.className} text-start `} >
+                    <span className={` ${regular.className} `}>Compete in coderships to get</span> <br />
                     dream internship offers
                 </h1>
+
+                <p className='px-80 leading-[2.5rem] text-[#FFFFFF60]'>
+                    Are you ready to take your coding skills to the next level & land your dream
+                    internship? Look no further than Coderships is the ultimate platform for
+                    students to upskill, compete, showcase & win dream internship offers.
+                </p>
             </motion.div>
 
             <motion.div className="h-[200px] bg-black flex items-center justify-center"
@@ -71,8 +77,8 @@ const StudentPage = () => {
                 </h2>
             </motion.div>
 
-            <Columns/>
-            <Accordion/>
+            <Columns />
+            <Accordion />
         </div>
     )
 }
