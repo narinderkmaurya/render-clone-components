@@ -11,11 +11,11 @@ import React, { useState, useRef } from 'react';
 
 
 const HomePage = () => {
-  
   const [otp, setOtp] = useState(Array(6).fill(''));
 
   const createRef = () => useRef<HTMLInputElement | null>(null);
   const inputRefs = Array.from({ length: 6 }, createRef);
+
 
       const handleOtpChange = (index: any, event: any) => {
         const newOtp = [...otp];
