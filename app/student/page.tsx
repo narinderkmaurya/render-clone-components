@@ -8,6 +8,7 @@ import Accordion from './components/accordion'
 import Marquee from '../codeships/marquee'
 import MainFooter from '@/components/mainFooter';
 import { Typewriter } from 'react-simple-typewriter'
+import Sail from './components/sail';
 const semi = localfont(
     {
         src: [
@@ -48,12 +49,10 @@ const StudentPage = () => {
     const ref = React.useRef(null)
     const isInView = useInView(ref, { once: false })
     return (
-        <div className="" ref={ref}>
-            <motion.div
+        <div className="" >
+            <div
                 className='min-h-[580px] max-h-[580px] bg-[#1B1B1B]  items-center justify-center w-full flex flex-col'
-                initial="hidden"
-                animate={isInView ? "visible" : "hidden"}
-                variants={textVariant}
+                
             >
                 <h1 className={`text-[3rem] ${semi.className} text-start `} >
                     <span className={` ${regular.className} `}>Compete in coderships to get</span> <br />
@@ -72,20 +71,19 @@ const StudentPage = () => {
                     internship? Look no further than Coderships is the ultimate platform for
                     students to upskill, compete, showcase & win dream internship offers.
                 </p>
-            </motion.div>
+            </div>
 
-            <motion.div className="h-[200px] bg-black flex items-center justify-center"
-                initial="hidden"
-                animate={isInView ? "visible" : "hidden"}
-                variants={imageVariant}
+            <div className="h-[200px] bg-black flex items-center justify-center"
+                
             >
                 <h2 className='text-[1.895rem]'>
                     Your passport to land dream internships in tech
                 </h2>
-            </motion.div>
+            </div>
 
             <Columns />
             <Accordion />
+            <Sail/>
             <MainFooter />
         </div>
     )

@@ -62,7 +62,7 @@ const Accordion = () => {
 
             {/* accordion */}
             <div className={`${regular.className} text-[#1B1B1B] text-[22px] `} style={{fontWeight:"500"}}  >
-                <div className="bg-[#F4F5F7] py-6">
+                <div className="bg-[#F4F5F7] mx-6 py-6">
                     <div className={` container max-w-3xl  margin-[2em] mx-auto text-black pt-4   `}>
                         <div className="bg-white py-4 mb-8 px-4 m-1.5 rounded-xl min-h-[80px] ">
                             <details  >
