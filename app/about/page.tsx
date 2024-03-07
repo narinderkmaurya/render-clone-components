@@ -11,6 +11,7 @@ import Columns from "./columns";
 
 import localfont from "next/font/local"
 import Navbar from "@/components/Navbar";
+import MainFooter from "@/components/mainFooter";
 
 
 
@@ -99,6 +100,7 @@ const AboutPage: NextPage = () => {
           </motion.div>
         </div>
       </motion.div>
+      <MainFooter/>
     </div>
   );
 };

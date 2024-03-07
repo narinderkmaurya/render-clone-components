@@ -3,7 +3,6 @@
 	box-sizing: border-box;
 }
 
-body{background-color: white;}
 
 *:focus {
 	outline: none;
@@ -33,6 +32,7 @@ details + details {
 
 summary {
 	list-style: none;
+	color: #1b1b1b;
 }
 
 summary::-webkit-details-marker {
@@ -42,7 +42,6 @@ summary::-webkit-details-marker {
 summary {
 	padding: .75em 1em;
     background-color: white;
-
 	cursor: pointer;
 	position: relative;
 	padding-left: calc(1.75rem + .75rem + .75rem);

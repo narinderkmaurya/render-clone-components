@@ -21,7 +21,7 @@ const regular = localfont(
     {
         src: [
             {
-                path: "../../OTF/GeneralSans-Regular.otf"
+                path: "../../OTF/GeneralSans-Medium.otf"
             }
         ],
         variable: "--font-regularGeneral"
@@ -41,7 +41,7 @@ export const Header = () => {
 
     return (
         <header className="" ref={ref}>
-            <motion.div className="h-0" initial="hidden" animate={inView ? "visible" : "hidden"} variants={animationVariant}>
+            <div className="h-0" >
                 <div className="flex w-full justify-between ">
                     <div className="border-b border-r w-[223px] h-[100px]  border-[#D7D7D750]" />
                     <div className="flex gap-[100px]">
@@ -52,8 +52,8 @@ export const Header = () => {
                 <div className="flex justify-end w-full   -ml-[100px] relative">
                     <div className=" w-[100px] h-[100px] bg-[#D9D9D91A] " />
                 </div>
-            </motion.div>
-            <motion.div className="items-center justify-center pt-[220px] flex flex-col space-y-12 w-full" initial="hidden" animate={inView ? "visible" : "hidden"} variants={animationVariant}>
+            </div>
+            <div className="items-center justify-center pt-[220px] flex flex-col space-y-12 w-full">
 
                 <div className="text-[2.25rem] text-center">
                     <h1 className={` ${semi.className}  `}>
@@ -77,7 +77,7 @@ export const Header = () => {
                     <div className="border-[#D7D7D750] border border-l-0 border-r-0 w-[300px]" />
                     <div className="border-[#D7D7D750] border border-r-0 w-[480px] xl:w-screen" />
                 </div>
-            </motion.div>
+            </div>
         </header>
     )
 }

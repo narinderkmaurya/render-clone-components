@@ -1,6 +1,7 @@
 import React from 'react'
 import localfont from "next/font/local"
 import Card from './card'
+import MarqueeAnimation from './marquee'
 
 
 
@@ -22,7 +23,7 @@ const regular = localfont(
     {
         src: [
             {
-                path: "../../OTF/GeneralSans-Regular.otf"
+                path: "../../OTF/GeneralSans-Medium.otf"
             }
         ],
         variable: "--font-regularGeneral"
@@ -42,6 +43,9 @@ const White = () => {
                     development skills, providing you with the opportunity to stand out to potential
                     startups and secure an internship that aligns with your career aspirations.
                 </p>
+            </div>
+            <div className="pt-12">
+                <MarqueeAnimation />
             </div>
 
 

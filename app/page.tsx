@@ -8,6 +8,7 @@ import Para from "@/components/Para";
 import Pattern from "@/components/Pattern";
 import SecondPara from "@/components/SecondPara";
 import Slider from "@/components/Slider";
+import MainFooter from "@/components/mainFooter";
 export default function Home() {
   return (
     <main className="">
@@ -37,6 +38,8 @@ export default function Home() {
           <Slider />
         </div>
       </div>
+      <MainFooter/>
+      
     </main>
   );
 }

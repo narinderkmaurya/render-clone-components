@@ -4,6 +4,7 @@ import Header from './header'
 import Gateway from './gateway'
 import Prize from './prize'
 import Note from './note'
+import MainFooter from '@/components/mainFooter'
 
 const page = () => {
   return (
@@ -13,6 +14,7 @@ const page = () => {
       <Gateway/>
       <Prize/>
       <Note/>
+      <MainFooter/>
     </div>
   )
 }

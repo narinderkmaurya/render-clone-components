@@ -6,8 +6,8 @@ import localfont from "next/font/local"
 import Columns from './components/column'
 import Accordion from './components/accordion'
 import Marquee from '../codeships/marquee'
-
-
+import MainFooter from '@/components/mainFooter';
+import { Typewriter } from 'react-simple-typewriter'
 const semi = localfont(
     {
         src: [
@@ -24,7 +24,7 @@ const regular = localfont(
     {
         src: [
             {
-                path: "../../OTF/GeneralSans-Regular.otf"
+                path: "../../OTF/GeneralSans-Medium.otf"
             }
         ],
         variable: "--font-regularGeneral"
@@ -57,7 +57,14 @@ const StudentPage = () => {
             >
                 <h1 className={`text-[3rem] ${semi.className} text-start `} >
                     <span className={` ${regular.className} `}>Compete in coderships to get</span> <br />
-                    dream internship offers
+                    <Typewriter
+                        words={['dream internship offers', 'refferal dream companies']}
+                        loop={0}
+                        cursor
+                        typeSpeed={70}
+                        deleteSpeed={50}
+                        delaySpeed={1000}
+                    />
                 </h1>
 
                 <p className='px-80 leading-[2.5rem] text-[#FFFFFF60]'>
@@ -79,6 +86,7 @@ const StudentPage = () => {
 
             <Columns />
             <Accordion />
+            <MainFooter />
         </div>
     )
 }

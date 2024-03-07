@@ -6,6 +6,7 @@ import Slider from '@/components/Slider'
 import CodeShipsMarquee from './marquee'
 import Navbar from '@/components/Navbar'
 import Black from './components/black'
+import MainFooter from '@/components/mainFooter'
 
 
 const CodeShips = () => {
@@ -18,6 +19,7 @@ const CodeShips = () => {
         <CodeShipsMarquee />
       </div>
       <Black />
+      <MainFooter/>
     </div>
   )
 }

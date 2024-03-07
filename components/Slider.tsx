@@ -13,7 +13,7 @@ const regular = localfont(
   {
     src: [
       {
-        path: "../OTF/GeneralSans-Regular.otf"
+        path: "../OTF/GeneralSans-Medium.otf"
       }
     ],
     variable: "--font-regularGeneral"

@@ -6,6 +6,8 @@ import White from './white'
 import Black from './black'
 import Apply from './apply'
 import AnotherBlack from './anotherblack'
+import MainFooter from '@/components/mainFooter'
+import MarqueeAnimation from './marquee'
 const page = () => {
   return (
     <div>
@@ -18,6 +20,7 @@ const page = () => {
             <Apply/>
             <AnotherBlack/>
         </div>
+        <MainFooter/>
     </div>
   )
 }
