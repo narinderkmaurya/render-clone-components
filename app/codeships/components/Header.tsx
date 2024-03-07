@@ -10,10 +10,10 @@ const semi = localfont(
   {
     src: [
       {
-      path:"../../../OTF/GeneralSans-Semibold.otf"
+        path: "../../../OTF/GeneralSans-Semibold.otf"
       }
     ],
-    variable:"--font-regularGeneral"
+    variable: "--font-regularGeneral"
   }
 )
 
@@ -21,10 +21,10 @@ const regular = localfont(
   {
     src: [
       {
-      path:"../../../OTF/GeneralSans-Medium.otf"
+        path: "../../../OTF/GeneralSans-Medium.otf"
       }
     ],
-    variable:"--font-regularGeneral"
+    variable: "--font-regularGeneral"
   }
 )
 
@@ -46,11 +46,11 @@ export const Header = () => {
           <div className="border-b border-r w-[223px] h-[100px]  border-[#D7D7D750]" />
           <div className="flex gap-[100px]">
             <div className="border border-t-0 justify-end w-[100px] h-[100px]  border-[#D7D7D750] " />
-            <div className="w-[100px] h-[100px] bg-[#d9d9d925]" />
+            <div className="w-[100px] h-[100px] bg-[#D9D9D940]" />
           </div>
         </div>
         <div className="flex justify-end w-full -ml-[100px] relative">
-          <Image src="https://ik.imagekit.io/internquest/C-min.svg?updatedAt=1709201833232" width={100} height={100} className="w-[100px] h-[100px] object-contain py-3 px-3  bg-[#4a4a4a]" alt='c' />
+          <div className="w-[100px] h-[100px] object-contain py-3 px-3  bg-[#2e2e2e]" />
         </div>
       </motion.div>
       <motion.div className="items-center justify-center pt-[220px] flex flex-col space-y-12 w-full" initial="hidden" animate={inView ? "visible" : "hidden"} variants={animationVariant}>
@@ -70,13 +70,15 @@ export const Header = () => {
           are secured
         </div>
 
-        <div className="flex w-full justify-end relative top-[49px]">
-          <div className="h-[100px] w-[100px] border-[#D7D7D750] border" />
-        </div>
-        <div className="flex w-full h-[50px] columns-3 ">
-          <div className="border-[#D7D7D750] border border-l-0 w-[500px]" />
-          <div className="border-[#D7D7D750] border border-l-0 border-r-0 w-[300px]" />
-          <div className="border-[#D7D7D750] border border-r-0 w-[480px] xl:w-screen" />
+        <div>
+          <div className="flex w-full justify-end relative ">
+            <div className="h-[100px] w-[100px] border-[#D7D7D750] border border-b-0" />
+          </div>
+          <div className="flex w-full h-[50px] columns-3 ">
+            <div className="border-[#D7D7D750] border border-l-0 w-[500px]" />
+            <div className="border-[#D7D7D750] border border-l-0 border-r-0 w-[300px]" />
+            <div className="border-[#D7D7D750] border border-r-0 w-[480px] xl:w-screen" />
+          </div>
         </div>
       </motion.div>
     </header>

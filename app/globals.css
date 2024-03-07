@@ -17,7 +17,13 @@
   border-left-style: none;
 
 }
+.brall3{
+  border: 1px solid #D7D7D780;
+  border-right-style: none;
+  border-top-style: none;
 
+
+}
 
 body{
   color:white;
