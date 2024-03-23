@@ -85,7 +85,7 @@ const page = () => {
           <div className="absolute  pt-12 flex   flex-col">
           <div className='bg-white min-h-[200px] mx-[53px] px-2 py-4 text-[20px] justify-center  flex flex-col  h-full text-[#141414] '>
           <p>
-          "Building on Render has
+          &quotBuilding on Render has
 been a superpower for
 Watershed. It lets us focus
 on what matters most —
@@ -99,7 +99,7 @@ features to customers in
 hours or days instead of
 weeks or months. Every
 startup should start on
-Render."
+Render.&quot
 </p>
 
 <p className='bg-[#e7fed4] text-[13px] px-4 py-2 font-mono'>
