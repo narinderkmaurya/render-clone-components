@@ -3,7 +3,7 @@
 
 import React from 'react'
 import Marquee from 'react-fast-marquee'
-import { motion, useInView } from 'framer-motion'
+
 import { useRef } from 'react'
 
 import Google from "@/public/Header/Group 47.png"
@@ -29,7 +29,6 @@ const medium = newLocal(
 
 const MarqueeAnimation = () => {
     const ref = useRef(null);
-    const isInView = useInView(ref, { once: false });
 
     const textAnimation = {
         visible: { opacity: 1, y: 0, x: 0, transition: { duration: 0.5, type: "spring", stiffness: 100 } },
@@ -42,24 +41,22 @@ const MarqueeAnimation = () => {
     };
 
     return (
-        <motion.div
+        <div
             ref={ref}
-            initial="hidden"
-            animate={isInView ? "visible" : "hidden"}
             className='bg-[#0c0c0c] h-[350px] w-full flex items-center lg:pl-16 2xl:pl-32 gap-20 '
         >
-            <motion.div className="w-2/5" variants={textAnimation}>
-                <motion.p
+            <div className="w-2/5">
+                <p
                     className={`${medium.variable} font-medium-sans  text-[28px]  leading-[3.5rem] 2xl:text-[24px] 2xl:pr-24`}
                     style={{ fontWeight: "500" }}
-                    variants={textAnimation}
+                   
                 >
                     Win referrals to your dream
                     companies by showcasing <br />
                     your skills through Codeships
-                </motion.p>
-            </motion.div>
-            <motion.div className="w-3/5 space-y-6 " variants={marqueeAnimation}>
+                </p>
+            </div>
+            <div className="w-3/5 space-y-6 " >
                 <Marquee className='' gradient={true} gradientWidth={120} gradientColor='#0c0c0c' >
                     <div className="flex">
 
@@ -85,8 +82,8 @@ const MarqueeAnimation = () => {
 
                     </div>
                 </Marquee>
-            </motion.div>
-        </motion.div>
+            </div>
+        </div>
     )
 }
 

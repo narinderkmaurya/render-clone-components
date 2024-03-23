@@ -1,7 +1,7 @@
 "use client";
 
 import React from 'react'
-import { motion, useInView } from 'framer-motion'
+
 import localfont from "next/font/local"
 import Columns from './components/column'
 import Accordion from './components/accordion'

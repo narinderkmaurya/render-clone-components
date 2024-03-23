@@ -2,7 +2,6 @@
 
 import React, { useRef, useState, useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
-import { motion, useAnimation } from 'framer-motion';
 import MobileCardsSection from './MobileCardsSection';
 import DesktopCardsSection from './DesktopCardsSection';
 import Image from 'next/image';
@@ -38,7 +37,6 @@ const Slider = () => {
   const { ref, inView } = useInView({
     triggerOnce: false, // Change to true if you want the animation to trigger only once
   });
-  const controls = useAnimation();
   const handleScroll = () => {
     if (scrollContainerRef.current) {
       const container = scrollContainerRef.current;
@@ -47,19 +45,7 @@ const Slider = () => {
     }
   };
 
-  useEffect(() => {
-    if (inView) {
-      controls.start({
-        opacity: 1,
-        x: 0,
-        transition: {
-          type: 'spring',
-          stiffness: 300,
-          damping: 30,
-        },
-      });
-    }
-  }, [controls, inView]);
+
 
   useEffect(() => {
     if (scrollContainerRef.current) {
@@ -91,13 +77,12 @@ const Slider = () => {
       <Image src='https://www.alchemy.com/_next/image?url=https%3A%2F%2Fwww.datocms-assets.com%2F105223%2F1705608917-testimonial-mobile.png&w=3840&q=75' width={3840} height={75} className='absolute inset-0 z-0 h-full w-full object-cover object-center lg:hidden' alt='mobile-card-bg-image' />
       <div className='z-10 flex flex-col gap-14'>
         <div className='mx-auto flex w-full max-w-[1170px] flex-col items-center justify-center gap-4 px-6 pt-12 md:px-8 md:pt-16 '>
-          <motion.h2
+          <h2
             className={`lg:text-[2.5rem] md:text-[38px] text-[32px] font-primary leading-none max-w-[770px] text-center text-[#2D2323] ${semi.className}`}
-            initial={{ opacity: 0, x: -100 }}
-            animate={controls}
+           
           >
             <span>Here’s what students have to say</span>
-          </motion.h2>
+          </h2>
         </div>
         <MobileCardsSection />
         <div

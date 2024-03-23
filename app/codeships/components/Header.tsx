@@ -1,7 +1,6 @@
 "use client"
 
 import Image from "next/image"
-import { motion } from "framer-motion"
 import c from "./c.png"
 import localfont from "next/font/local"
 import { useInView } from "react-intersection-observer"
@@ -41,7 +40,7 @@ export const Header = () => {
 
   return (
     <header className="" ref={ref}>
-      <motion.div className="h-0" initial="hidden" animate={inView ? "visible" : "hidden"} variants={animationVariant}>
+      <div className="h-0">
         <div className="flex w-full justify-between ">
           <div className="border-b border-r w-[223px] h-[100px]  border-[#D7D7D750]" />
           <div className="flex gap-[100px]">
@@ -52,8 +51,8 @@ export const Header = () => {
         <div className="flex justify-end w-full -ml-[100px] relative">
           <div className="w-[100px] h-[100px] object-contain py-3 px-3  bg-[#2e2e2e]" />
         </div>
-      </motion.div>
-      <motion.div className="items-center justify-center pt-[220px] flex flex-col space-y-12 w-full" initial="hidden" animate={inView ? "visible" : "hidden"} variants={animationVariant}>
+      </div>
+      <div className="items-center justify-center pt-[220px] flex flex-col space-y-12 w-full" >
 
         <div className="text-[2.25rem] text-center">
           <h1 className={` ${semi.className}  `}>
@@ -80,7 +79,7 @@ export const Header = () => {
             <div className="border-[#D7D7D750] border border-r-0 w-[480px] xl:w-screen" />
           </div>
         </div>
-      </motion.div>
+      </div>
     </header>
   )
 }

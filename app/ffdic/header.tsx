@@ -1,7 +1,7 @@
 "use client"
 
 import Image from "next/image"
-import { motion } from "framer-motion"
+import { motion } from ""
 import c from "./c.png"
 import localfont from "next/font/local"
 import { useInView } from "react-intersection-observer"

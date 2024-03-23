@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { motion } from "framer-motion";
+import { motion } from "";
 import { useInView } from "react-intersection-observer";
 
 function Pattern() {
@@ -17,24 +17,24 @@ function Pattern() {
             {inView && (
                 <div className="hidden 2xl:block">
                     <div className="flex">
-                        <motion.div className="w-[200px] h-[100px] brall " initial="hidden" animate="visible" variants={variants} />
-                        <motion.div className="w-[100px] h-[100px]  " initial="hidden" animate="visible" variants={variants} />
-                        <motion.div className="w-[100px] h-[100px] brall " initial="hidden" animate="visible" variants={variants} />
-                        <motion.div className="w-[200px] h-[100px] brall2 " initial="hidden" animate="visible" variants={variants} />
-                        <motion.div className="w-[100px] h-[100px]  " initial="hidden" animate="visible" variants={variants} />
-                        <motion.div className="w-[100px] h-[100px] brall " initial="hidden" animate="visible" variants={variants} />
-                        <motion.div className="w-[200px] h-[100px]" initial="hidden" animate="visible" variants={variants} />
-                        <motion.div className="w-[530px] 2xl:flex-1 h-[100px] brall " initial="hidden" animate="visible" variants={variants} />
+                        <div className="w-[200px] h-[100px] brall " initial="hidden" animate="visible" variants={variants} />
+                        <div className="w-[100px] h-[100px]  " initial="hidden" animate="visible" variants={variants} />
+                        <div className="w-[100px] h-[100px] brall " initial="hidden" animate="visible" variants={variants} />
+                        <div className="w-[200px] h-[100px] brall2 " initial="hidden" animate="visible" variants={variants} />
+                        <div className="w-[100px] h-[100px]  " initial="hidden" animate="visible" variants={variants} />
+                        <div className="w-[100px] h-[100px] brall " initial="hidden" animate="visible" variants={variants} />
+                        <div className="w-[200px] h-[100px]" initial="hidden" animate="visible" variants={variants} />
+                        <div className="w-[530px] 2xl:flex-1 h-[100px] brall " initial="hidden" animate="visible" variants={variants} />
                     </div>
                     <div className="flex">
-                        <motion.div className="w-[100px] h-[100px]  " initial="hidden" animate="visible" variants={variants} />
-                        <motion.div className="w-[100px] h-[221px] " initial="hidden" animate="visible" variants={variants} />
-                        <motion.div className="w-[100px] h-[220px]  brall " initial="hidden" animate="visible" variants={variants} />
-                        <motion.div className="w-[200px] h-[100px]" initial="hidden" animate="visible" variants={variants} />
-                        <motion.div className="w-[100px] h-[100px]  " initial="hidden" animate="visible" variants={variants} />
-                        <motion.div className="w-[100px] h-[100px] brall" initial="hidden" animate="visible" variants={variants} />
-                        <motion.div className="w-[100px] h-[100px] " initial="hidden" animate="visible" variants={variants} />
-                        <motion.div className="w-[200px] h-[100px] brall" initial="hidden" animate="visible" variants={variants} />
+                        <div className="w-[100px] h-[100px]  " initial="hidden" animate="visible" variants={variants} />
+                        <div className="w-[100px] h-[221px] " initial="hidden" animate="visible" variants={variants} />
+                        <div className="w-[100px] h-[220px]  brall " initial="hidden" animate="visible" variants={variants} />
+                        <div className="w-[200px] h-[100px]" initial="hidden" animate="visible" variants={variants} />
+                        <div className="w-[100px] h-[100px]  " initial="hidden" animate="visible" variants={variants} />
+                        <div className="w-[100px] h-[100px] brall" initial="hidden" animate="visible" variants={variants} />
+                        <div className="w-[100px] h-[100px] " initial="hidden" animate="visible" variants={variants} />
+                        <div className="w-[200px] h-[100px] brall" initial="hidden" animate="visible" variants={variants} />
                     </div>
                 </div>
             )}
@@ -43,24 +43,24 @@ function Pattern() {
             {inView && (
                 <div className="block 2xl:hidden">
                     <div className="flex">
-                        <motion.div className="w-[100px] h-[100px] brall " initial="hidden" animate="visible" variants={variants} />
-                        <motion.div className="w-[100px] h-[100px]  " initial="hidden" animate="visible" variants={variants} />
-                        <motion.div className="w-[100px] h-[100px] brall " initial="hidden" animate="visible" variants={variants} />
-                        <motion.div className="w-[200px] h-[100px] brall2 " initial="hidden" animate="visible" variants={variants} />
-                        <motion.div className="w-[100px] h-[100px]  " initial="hidden" animate="visible" variants={variants} />
-                        <motion.div className="w-[100px] h-[100px] brall " initial="hidden" animate="visible" variants={variants} />
-                        <motion.div className="w-[200px] h-[100px]" initial="hidden" animate="visible" variants={variants} />
-                        <motion.div className="w-[380px] h-[100px] brall " initial="hidden" animate="visible" variants={variants} />
+                        <div className="w-[100px] h-[100px] brall " initial="hidden" animate="visible" variants={variants} />
+                        <div className="w-[100px] h-[100px]  " initial="hidden" animate="visible" variants={variants} />
+                        <div className="w-[100px] h-[100px] brall " initial="hidden" animate="visible" variants={variants} />
+                        <div className="w-[200px] h-[100px] brall2 " initial="hidden" animate="visible" variants={variants} />
+                        <div className="w-[100px] h-[100px]  " initial="hidden" animate="visible" variants={variants} />
+                        <div className="w-[100px] h-[100px] brall " initial="hidden" animate="visible" variants={variants} />
+                        <div className="w-[200px] h-[100px]" initial="hidden" animate="visible" variants={variants} />
+                        <div className="w-[380px] h-[100px] brall " initial="hidden" animate="visible" variants={variants} />
                     </div>
                     <div className="flex">
-                        <motion.div className="w-[100px] h-[100px]  " initial="hidden" animate="visible" variants={variants} />
-                        <motion.div className="w-[100px] h-[221px] brall " initial="hidden" animate="visible" variants={variants} />
-                        <motion.div className="w-[100px] h-[100px]  " initial="hidden" animate="visible" variants={variants} />
-                        <motion.div className="w-[200px] h-[100px]" initial="hidden" animate="visible" variants={variants} />
-                        <motion.div className="w-[100px] h-[100px] brall " initial="hidden" animate="visible" variants={variants} />
-                        <motion.div className="w-[100px] h-[100px] " initial="hidden" animate="visible" variants={variants} />
-                        <motion.div className="w-[200px] h-[100px] brall" initial="hidden" animate="visible" variants={variants} />
-                        <motion.div className="w-[380px] h-[100px] " initial="hidden" animate="visible" variants={variants} />
+                        <div className="w-[100px] h-[100px]  " initial="hidden" animate="visible" variants={variants} />
+                        <div className="w-[100px] h-[221px] brall " initial="hidden" animate="visible" variants={variants} />
+                        <div className="w-[100px] h-[100px]  " initial="hidden" animate="visible" variants={variants} />
+                        <div className="w-[200px] h-[100px]" initial="hidden" animate="visible" variants={variants} />
+                        <div className="w-[100px] h-[100px] brall " initial="hidden" animate="visible" variants={variants} />
+                        <div className="w-[100px] h-[100px] " initial="hidden" animate="visible" variants={variants} />
+                        <div className="w-[200px] h-[100px] brall" initial="hidden" animate="visible" variants={variants} />
+                        <div className="w-[380px] h-[100px] " initial="hidden" animate="visible" variants={variants} />
                     </div>
                 </div>
             )}

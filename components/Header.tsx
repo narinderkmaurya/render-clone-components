@@ -10,7 +10,7 @@ import rotate from "@/public/Header/Group 37.svg"
 import green from "@/public/Header/Vector.svg"
 import ex from "@/public/ex.png"
 
-import { motion } from 'framer-motion';
+;
 import localfont from "next/font/local"
 import newLocal from "next/font/local"
 
@@ -60,65 +60,48 @@ const Header = () => {
             </div>
 
 
-            <motion.div className="h-0  lg:top-[51px] 2xl:left-[130px] 2xl:top-[51px] relative " initial={{ scale: 0.9 }}
-                animate={{ scale: 1 }}
-                transition={{ duration: 1, ease: "easeInOut" }}>
+            <div className="h-0  lg:top-[51px] 2xl:left-[130px] 2xl:top-[51px] relative " >
                 <Image src="https://ik.imagekit.io/internquest/java-min.svg?updatedAt=1709201833586" width={100} height={100} className="w-[100px] h-[100px] py-4 object-contain bg-[#4a4a4a]"  alt="" />
-            </motion.div>
-            <motion.div className="h-0 right-0 top-[135px] absolute justify-end " initial={{ scale: 0.9 }}
-                animate={{ scale: 1 }}
-                transition={{ duration: 1, ease: "easeInOut" }}>
+            </div>
+            <div className="h-0 right-0 top-[135px] absolute justify-end " >
                 <Image src="https://ik.imagekit.io/internquest/npm-min.svg?updatedAt=1709201833487" alt="" width={200} height={100} className="h-[100px] w-[200px]  px-6  object-contain 2xl:hidden bg-[#4a4a4a]" />
                 <Image src={npm} alt="" className="2xl:block hidden" />
-            </motion.div>
-            <motion.div className="h-0 right-[200px] lg:right-[200px] 2xl:right-[333px]  top-[235px] absolute justify-end" initial={{ scale: 0.9 }}
-                animate={{ scale: 1 }}
-                transition={{ duration: 1, ease: "easeInOut" }}>
+            </div>
+            <div className="h-0 right-[200px] lg:right-[200px] 2xl:right-[333px]  top-[235px] absolute justify-end" >
                 <Image src="https://ik.imagekit.io/internquest/express-min.svg?updatedAt=1709201833468" width={100} height={100} alt="ex" className="w-[100px] h-[100px] bg-[#4a4a4a] px-4 object-contain " />
-            </motion.div>
-            <motion.div className="h-0 top-[250px] 2xl:top-52 relative left-[270px] 2xl:left-[350px] " initial={{ scale: 0.9 }}
-                animate={{ scale: 1 }}
-                transition={{ duration: 1, ease: "easeInOut" }} >
+            </div>
+            <div className="h-0 top-[250px] 2xl:top-52 relative left-[270px] 2xl:left-[350px] "  >
                 <Image src={rotate} alt="" />
-            </motion.div>
-            <motion.div className="h-0 top-[450px] 2xl:top-[450px] relative 2xl:left-[500px] md:left-[300px] lg:left-[340px]" initial={{ scale: 0.9 }}
-                animate={{ scale: 1 }}
-                transition={{ duration: 1, ease: "easeInOut" }} >
+            </div>
+            <div className="h-0 top-[450px] 2xl:top-[450px] relative 2xl:left-[500px] md:left-[300px] lg:left-[340px]"  >
                 <Image src={green} alt="" />
-            </motion.div>
+            </div>
             <div className="flex items-center  justify-center min-h-[900px] max-h-[900px] w-full">
                 <div className="text-center px-56 2xl:px-80 space-y-6 md:pt-24 " >
-                    <motion.h1
+                    <h1
                         className={`text-[3rem] leading-[4.75rem] ${semibold.variable} font-semibold-sans `}
                         style={{ fontWeight: "400" }}
-                        initial={{ opacity: 0, y: -50 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 1, ease: "easeInOut" }}
+                       
                     >
                         Reimagining the way students
                         <br />
                         get dream internship opportunities
-                    </motion.h1>
+                    </h1>
 
-                    <motion.p
+                    <p
                         className={`text-[1.5rem] ${medium.variable} leading-[2.75rem] font-medium-sans text-[#7A7A7A]`}
-                        initial={{ opacity: 0, y: -50 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 1, ease: "easeInOut" }}
+                       
                     >
                         Ever felt your skills didn’t get the spotlight they deserved? Let your skills <br />
                         speak through virtual internship challenges to showcase your work and <br />
                         stand out with proof-of-skills
-                    </motion.p>
+                    </p>
 
-                    <motion.button
+                    <button
                         className="h-[50px] rounded-[10px] w-[158px] mt-4 bg-[#6941c6]"
-                        initial={{ opacity: 0, y: 50 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 1, ease: "easeInOut" }}
                     >
                         Get Started
-                    </motion.button>
+                    </button>
 
                 </div>
             </div>
