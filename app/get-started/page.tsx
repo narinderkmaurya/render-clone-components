@@ -6,7 +6,6 @@ import github from "./github.svg"
 import gitlab from "./gitlab.svg"
 import google from "./google.svg"
 import Link from 'next/link'
-import Footer from '@/components/Footer'
 
 
 
